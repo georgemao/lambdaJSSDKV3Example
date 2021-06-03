@@ -1,0 +1,18 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: A function to experiment cold start time when cold starts 
+
+Resources:
+  sdk3TestFunc:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: index.handler
+      Runtime: nodejs14.x
+      Timeout: 10
+      Tracing: Active
+      Environment:
+          Variables:
+            _X_AMZN_TRACE_ID: 'asdfasdfasdfasdf'
+      Policies:
+        - AWSXrayWriteOnlyAccess
+        - AmazonDynamoDBReadOnlyAccess

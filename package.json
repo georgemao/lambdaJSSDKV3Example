@@ -1,0 +1,14 @@
+{
+  "name": "lambdaOCIExample",
+  "version": "1.0.0",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.3.3",
+    "@aws-sdk/node-http-handler": "^3.3.3",
+    "aws-xray-sdk-core": "3.3.3"
+  },
+  "comments": {
+    "Dependencies if working with TS": "",
+    "@aws-sdk/types": "^3.3.3",
+    "ts-node": "^9.0.0"
+  }
+}
